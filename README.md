@@ -7,10 +7,6 @@ This prototype demonstrates how AI can empower us to have more control over the 
 > [!TIP]
 > 🎉 New: Mute Words feature added - automatically filter posts containing specific words!
 
-## Demo
-
-![Cringe Guard Demo Video](./images/demo-cringe-guard.gif)
-
 ## How it works?
 
 The cringe-guard browser extension filters out cringe content from your LinkedIn and Instagram feeds using an AI model. When you browse these platforms:
@@ -18,14 +14,15 @@ The cringe-guard browser extension filters out cringe content from your LinkedIn
 1. **Detects New Posts**: As new posts appear in your feed, the extension detects them in real time.
 2. **Sends for Analysis**: The post content is sent to an AI model (via an API) that classifies it based on predefined "cringe" criteria (e.g., engagement bait, overly promotional content, etc.).
 3. **Filters Content**: Posts identified as cringe are filtered according to your preferred mode:
-    - Blur Mode: Blurs cringe until you decide (with a "Click to View" option)
-    - Vanish Mode: Vanish cringe completely from your feed
-4. **User Control**: Users can customize the types of posts they want to see and hide, and control their settings (like 
-API keys) via modifying `content.js`.
+   - Blur Mode: Blurs cringe until you decide (with a "Click to View" option)
+   - Vanish Mode: Vanish cringe completely from your feed
+4. **User Control**: Users can customize the types of posts they want to see and hide, and control their settings (like
+   API keys) via modifying `content.js`.
 
 ## Installation
 
 ### Firefox (Default)
+
 1. Clone or download this repository
 2. Open Firefox and navigate to `about:debugging`
 3. Click "This Firefox" in the left sidebar
@@ -34,6 +31,7 @@ API keys) via modifying `content.js`.
 6. Configure your Groq API key in the extension settings
 
 ### Chrome
+
 1. Clone or download this repository
 2. Replace `manifest.json` with `manifest-chrome.json` (rename it to `manifest.json`)
 3. Open Chrome and navigate to `chrome://extensions/`
@@ -44,6 +42,7 @@ API keys) via modifying `content.js`.
 For detailed installation instructions, see [INSTALLATION.md](./INSTALLATION.md).
 
 ## TODO
+
 - [x] Refactor the codebase a bit
 - [x] Allow users to input API key through a simple interface in popup.html.
 - [x] Provide users with the option to either blur or completely remove content from the DOM.
