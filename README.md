@@ -7,6 +7,10 @@ This prototype demonstrates how AI can empower us to have more control over the 
 > [!TIP]
 > 🎉 New: Mute Words feature added - automatically filter posts containing specific words!
 
+## Demo
+
+![Cringe Guard Demo Video](./images/demo.mp4)
+
 ## How it works?
 
 The cringe-guard browser extension filters out cringe content from your LinkedIn and Instagram feeds using an AI model. When you browse these platforms:
