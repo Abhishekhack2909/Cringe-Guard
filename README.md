@@ -9,7 +9,7 @@ This prototype demonstrates how AI can empower us to have more control over the 
 
 ## Demo
 
-![Cringe Guard Demo Video](./images/demo.mp4)
+![Cringe Guard Demo Video](./images/demo.gif)
 
 ## How it works?
 
