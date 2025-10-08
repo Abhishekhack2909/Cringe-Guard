@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Cringe Guard: filter out cringe content on your LinkedIn feed using AI",
+    "name": "FeedCop: filter out cringe content on your LinkedIn feed using AI",
     "author": "Abhishek Tripathi",
     "version": "0.0.6",
     "description": "AI-powered browser extension that filters cringe, clickbait & low-value posts from your LinkedIn feed in real-time.",
@@ -22,7 +22,7 @@
     },
     "action": {
         "default_popup": "./pages/popup.html",
-        "default_title": "Cringe Guard"
+        "default_title": "FeedCop"
     },
     "options_page": "./pages/settings.html",
     "permissions": [

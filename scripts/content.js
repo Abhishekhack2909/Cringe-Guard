@@ -109,7 +109,7 @@ function cringeGuardThisPost(post, filterMode) {
                 postContainer.style.opacity = '0';
                 postContainer.style.pointerEvents = 'none'; // Prevents interaction
             }
-            console.log('[Cringe Guard] Post removed');
+            console.log('[FeedCop] Post removed');
             return;
         }
         const wrapper = document.createElement('div');
