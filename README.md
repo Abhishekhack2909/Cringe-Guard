@@ -1,67 +1,273 @@
-# FeedCop 📵
+<div align="center">
 
-Control your LinkedIn feed with an LLM of your choice. A browser extension that filters out cringe content (engagement click-bait, promotional content, and low-value off-topic posts etc) on your LinkedIn feed. It uses AI to analyse posts in real time and hides cringe worthy content.
+# 🛡️ FeedCop
 
-This prototype demonstrates how AI can empower us to have more control over the content we consume.
+### AI-Powered LinkedIn Feed Filter
 
-> [!TIP]
-> 🎉 New: Mute Words feature added - automatically filter posts containing specific words!
+**Take control of your LinkedIn experience with intelligent content filtering**
 
-## Demo
+[![Firefox Add-on](https://img.shields.io/badge/Firefox-Available-orange?style=for-the-badge&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/feed-cop/)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Manual%20Install-blue?style=for-the-badge&logo=googlechrome)](https://github.com/Abhishekhack2909/FeedCop)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-![FeedCop Demo Video](./images/demo2.gif)
+![FeedCop Demo](./images/demo2.gif)
 
-## How it works?
+</div>
 
-The FeedCop browser extension filters out cringe content from your LinkedIn feed using an AI model. When you browse LinkedIn:
+---
 
-1. **Detects New Posts**: As new posts appear in your LinkedIn feed, the extension detects them in real time.
-2. **Sends for Analysis**: The post content is sent to an AI model (via an API) that classifies it based on predefined "cringe" criteria (e.g., engagement bait, overly promotional content, etc.).
-3. **Filters Content**: Posts identified as cringe are filtered according to your preferred mode:
-   - Blur Mode: Blurs cringe until you decide (with a "Click to View" option)
-   - Vanish Mode: Vanish cringe completely from your feed
-4. **User Control**: Users can customize the types of posts they want to see and hide, and control their settings (like
-   API keys) via the extension popup and settings.
+## 🎯 What is FeedCop?
 
-## Installation
+FeedCop is an intelligent browser extension that transforms your LinkedIn experience by filtering out low-quality content using advanced AI. Say goodbye to cringe posts, clickbait, and engagement farming - and hello to a cleaner, more professional feed.
 
-### Firefox (Default)
+### ✨ Key Features
 
-1. Clone or download this repository
-2. Open Firefox and navigate to `about:debugging`
-3. Click "This Firefox" in the left sidebar
-4. Click "Load Temporary Add-on"
-5. Select the `manifest.json` file from the extension folder
-6. Configure your Groq API key in the extension settings
+- 🤖 **AI-Powered Filtering** - Uses Groq's LLM to intelligently identify cringe content
+- 🎛️ **Dual Filter Modes** - Choose between Blur or Vanish modes
+- 🔇 **Mute Words** - Automatically filter posts containing specific keywords
+- ⚡ **Real-time Processing** - Filters content as you scroll
+- 🎨 **Beautiful UI** - Modern, vibrant interface with smooth animations
+- 🔒 **Privacy First** - All processing happens locally, your data stays private
 
-### Chrome
+---
 
-1. Clone or download this repository
-2. Replace `manifest.json` with `manifest-chrome.json` (rename it to `manifest.json`)
-3. Open Chrome and navigate to `chrome://extensions/`
-4. Enable "Developer mode" in the top-right corner
-5. Click "Load unpacked" and select the extension folder
-6. Configure your Groq API key in the extension settings
+## 🚀 Quick Start
 
-For detailed installation instructions, see [INSTALLATION.md](./INSTALLATION.md).
+### 🦊 Firefox (Recommended)
 
-## TODO
+**✅ Official Firefox Add-on Store**
 
-- [x] Refactor the codebase a bit
-- [x] Allow users to input API key through a simple interface in popup.html.
-- [x] Provide users with the option to either blur or completely remove content from the DOM.
-- [x] In addition to analyzing the text content of posts, automatically detect and remove posts with "Promoted" tags by default.
-- [ ] Add support for Instagram to filter cringe content on Instagram feeds.
-- [ ] Enable custom post filters, letting users choose which posts to show or hide via UI
-- [x] Persist user settings (API key and filters) using Chrome Storage API.
-- [x] Test cross-browser compatibility (Chrome & Firefox)
-- [ ] Bug: The extension is unexpectedly logging `GET chrome-extension://invalid/ net::ERR_FAILED` in the console for some reason.
-- [ ] Redesign the logo to better reflect the purpose of the extension
+1. **Install directly from Firefox Add-ons:**
+   
+   [![Get FeedCop for Firefox](https://img.shields.io/badge/Get%20FeedCop-Firefox%20Add--ons-orange?style=for-the-badge&logo=firefox)](https://addons.mozilla.org/en-US/firefox/addon/feed-cop/)
 
-## Built with ❤️ by
+2. **Set up your API key** (see [API Setup](#-api-setup) below)
 
-[Abhishek Tripathi](https://www.linkedin.com/in/abhishek-tripathi-a714ab30b/), check out more projects on [GitHub](https://github.com/Abhishekhack2909)
+3. **Start filtering!** 🎉
 
-## Contributing
+### 🌐 Chrome & Other Browsers
 
-I welcome contributions to the `FeedCop` project! Whether it's a bug fix, a feature request, or improving documentation, your contributions are appreciated.
+**📦 Manual Installation Required**
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/Abhishekhack2909/FeedCop.git
+   cd FeedCop
+   ```
+
+2. **For Chrome:**
+   - Rename `manifest-chrome.json` to `manifest.json`
+   - Open Chrome → `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" → Select the `FeedCop` folder
+
+3. **For Edge:**
+   - Same as Chrome but use `edge://extensions/`
+
+4. **Set up your API key** (see [API Setup](#-api-setup) below)
+
+---
+
+## 🔑 API Setup
+
+FeedCop requires a **free** Groq API key to power its AI filtering capabilities.
+
+### Step 1: Get Your Free Groq API Key
+
+1. **Visit Groq Console:** [https://console.groq.com](https://console.groq.com)
+2. **Sign up/Login** with your preferred method
+3. **Navigate to API Keys** section
+4. **Create a new API key** and copy it
+
+> 💡 **Groq offers generous free tier limits** - perfect for personal use!
+
+### Step 2: Configure FeedCop
+
+1. **Click the FeedCop icon** in your browser toolbar
+2. **Click the settings gear** ⚙️ icon
+3. **Paste your API key** in the input field
+4. **Click "Save"** ✅
+
+### Step 3: Start Filtering!
+
+1. **Return to the main popup**
+2. **Toggle "Extension Active"** to enable filtering
+3. **Visit LinkedIn** and watch FeedCop work its magic! ✨
+
+---
+
+## 🎮 How to Use
+
+### 🔄 Toggle Filtering
+- Click the **FeedCop icon** in your toolbar
+- Use the **large toggle switch** to enable/disable filtering
+- Watch the status change from "Extension Disabled" to "Extension Active"
+
+### 🎛️ Choose Your Filter Mode
+
+**🌫️ Blur Mode** (Default)
+- Blurs cringe content with a "Click to View" option
+- Lets you decide if you want to see the content
+
+**👻 Vanish Mode**
+- Completely removes cringe content from your feed
+- Creates a cleaner, distraction-free experience
+
+### 🔇 Mute Words Feature
+
+1. **Add keywords** you want to filter (e.g., "promoted", "engagement", "viral")
+2. **Posts containing these words** will be automatically filtered
+3. **Manage your list** - add/remove words anytime
+
+### 📊 Track Your Progress
+
+- **Cringe Dodged:** See how many low-quality posts you've avoided
+- **Time Saved:** Estimate of time saved from not viewing cringe content
+
+---
+
+## 🧠 How It Works
+
+```mermaid
+graph LR
+    A[LinkedIn Post] --> B[FeedCop Detection]
+    B --> C[AI Analysis via Groq]
+    C --> D{Cringe Content?}
+    D -->|Yes| E[Apply Filter]
+    D -->|No| F[Show Normally]
+    E --> G[Blur/Vanish Mode]
+    F --> H[Clean Feed]
+```
+
+### 🔍 AI Filtering Criteria
+
+FeedCop's AI identifies posts that contain:
+
+- 📢 **Engagement Bait** - "Like if you agree", "Comment interested"
+- 🎪 **Clickbait Headlines** - Overly dramatic or misleading titles
+- 💰 **Promotional Spam** - Excessive self-promotion or course selling
+- 🎭 **Fake Inspiration** - Generic motivational content without substance
+- 🤖 **AI-Generated Content** - Low-effort automated posts
+- 📱 **Off-topic Content** - Non-professional personal posts
+
+---
+
+## 🛠️ Technical Details
+
+### 🏗️ Architecture
+- **Frontend:** Vanilla JavaScript with modern ES6+ features
+- **AI Processing:** Groq API with Gemma2-9B-IT model
+- **Storage:** Browser's sync storage for cross-device settings
+- **Compatibility:** Manifest V2 (Firefox) & V3 (Chrome) support
+
+### 🔒 Privacy & Security
+- **Local Processing:** Content analysis happens via secure API calls
+- **No Data Storage:** FeedCop doesn't store your LinkedIn data
+- **API Key Security:** Keys are stored locally in browser storage
+- **Open Source:** Full transparency - inspect the code yourself
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+### 🐛 Report Issues
+- Found a bug? [Open an issue](https://github.com/Abhishekhack2909/FeedCop/issues)
+- Include browser version, steps to reproduce, and screenshots
+
+### 💡 Suggest Features
+- Have an idea? [Start a discussion](https://github.com/Abhishekhack2909/FeedCop/discussions)
+- Check existing issues first to avoid duplicates
+
+### 🔧 Development Setup
+
+1. **Fork & Clone:**
+   ```bash
+   git clone https://github.com/yourusername/FeedCop.git
+   cd FeedCop
+   ```
+
+2. **Load in Browser:**
+   - Follow the manual installation steps above
+   - Make your changes and test locally
+
+3. **Submit PR:**
+   - Create a feature branch
+   - Make your changes
+   - Submit a pull request with clear description
+
+---
+
+## 📋 Roadmap
+
+### ✅ Completed
+- [x] AI-powered content filtering
+- [x] Dual filter modes (Blur/Vanish)
+- [x] Mute words functionality
+- [x] Cross-browser compatibility
+- [x] Modern UI with vibrant design
+- [x] Firefox Add-on Store publication
+
+### 🚧 In Progress
+- [ ] Custom filter criteria configuration
+- [ ] Advanced statistics and analytics
+- [ ] Export/import settings
+
+### 🔮 Future Plans
+- [ ] Support for other social platforms (Twitter, Instagram)
+- [ ] Machine learning model improvements
+- [ ] Community-driven filter rules
+- [ ] Mobile browser support
+
+---
+
+## 📊 Stats & Recognition
+
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/Abhishekhack2909/FeedCop?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Abhishekhack2909/FeedCop?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Abhishekhack2909/FeedCop)
+![GitHub license](https://img.shields.io/github/license/Abhishekhack2909/FeedCop)
+
+</div>
+
+---
+
+## 🙏 Acknowledgments
+
+- **Groq** for providing excellent AI API services
+- **Mozilla** for the Firefox Add-on platform
+- **LinkedIn** for the platform (even though we're filtering it! 😄)
+- **Open Source Community** for inspiration and feedback
+
+---
+
+## 📞 Support & Contact
+
+<div align="center">
+
+**Built with ❤️ by [Abhishek Tripathi](https://www.linkedin.com/in/abhishek-tripathi-a714ab30b/)**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abhishek-tripathi-a714ab30b/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/Abhishekhack2909)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:your-email@example.com)
+
+### 💬 Get Help
+- 📖 [Documentation](https://github.com/Abhishekhack2909/FeedCop/wiki)
+- 🐛 [Report Issues](https://github.com/Abhishekhack2909/FeedCop/issues)
+- 💡 [Feature Requests](https://github.com/Abhishekhack2909/FeedCop/discussions)
+- ⭐ **Like FeedCop? Give us a star!**
+
+</div>
+
+---
+
+<div align="center">
+
+**🛡️ Take back control of your LinkedIn feed with FeedCop! 🛡️**
+
+*Made with passion for a cleaner, more professional LinkedIn experience*
+
+</div>
