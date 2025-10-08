@@ -31,9 +31,8 @@
     ],
     "browser_specific_settings": {
         "gecko": {
-            "id": "feedcop@Abhishek.com",
-            "strict_min_version": "126.0",
-            "data_collection_permissions": []
+            "id": "feedcop@abhishek.com",
+            "strict_min_version": "126.0"
         }
     }
 }

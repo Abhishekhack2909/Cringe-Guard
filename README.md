@@ -9,7 +9,7 @@ This prototype demonstrates how AI can empower us to have more control over the 
 
 ## Demo
 
-![FeedCop Demo Video](./images/demo.gif)
+![FeedCop Demo Video](./images/demo2.gif)
 
 ## How it works?
 
